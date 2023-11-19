@@ -1,5 +1,5 @@
 {% set name = "pyqalloy" %}
-{% set version = "0.3.5.post2" %}
+{% set version = "0.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyqalloy-{{ version }}.tar.gz
-  sha256: 848e537b13a470b7c75ef9d39847022d910e588aa3be797ae1941205a40193c5
+  sha256: 4811823d166782b9302aa4f4ee18008bf9cb504e0b6ef37d53ffc32f2a0ba158
 
 build:
   noarch: python
@@ -44,7 +44,8 @@ test:
 
 about:
   home: https://github.com/PhasesResearchLab/PyQAlloy
-  summary: PyQAlloy is a tool for detection of abnormal data in alloy datasets (and other chemical spaces), allowing removal of hard-to-find erros in the data which often introduce systematic errors throwing off machine learning and researchers alike. Its development is a part of ULTERA Project carried under the DOE ARPA-E ULTIMATE program that aims to develop a new generation of materials for turbine blades and related applications.
+  summary: PyQAlloy is a tool for detection of abnormal data in alloy datasets (and other chemical spaces), allowing removal of hard-to-find erros in the data which often introduce systematic errors throwing off machine learning and researchers alike. Its development is a part of ULTERA Project carried under the DOE ARPA-E
+    ULTIMATE program that aims to develop a new generation of materials for turbine blades and related applications.
   license: MIT
   license_file: LICENSE
 
