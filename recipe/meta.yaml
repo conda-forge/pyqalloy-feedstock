@@ -1,5 +1,5 @@
 {% set name = "pyqalloy" %}
-{% set version = "0.3.7" %}
+{% set version = "0.3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyqalloy-{{ version }}.tar.gz
-  sha256: be21569e0fcdf40fa1cb1f630ae54f1d9668b9c950ca95c61ef8935021b13e1d
+  sha256: 593f4a4f724b6319688361f237b000e87e66e113c9ac942237281532253e7675
 
 build:
   noarch: python
@@ -23,8 +23,8 @@ requirements:
   run:
     - montydb >=2.5.2
     - python >=3.9
-    - pymatgen >=2022.1.9
-    - numpy >=1.22.0
+    - pymatgen >=2024.2.20
+    - numpy >=1.25.0,<2.0.0
     - tqdm >=4.63.0
     - natsort >=8.0.0
     - pymongo >=4.2
