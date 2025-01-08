@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyqalloy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyqalloy-{{ version }}.tar.gz
   sha256: 593f4a4f724b6319688361f237b000e87e66e113c9ac942237281532253e7675
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=61.0
     - setuptools-scm
     - pip
   run:
     - montydb >=2.5.2
-    - python >=3.9
+    - python >={{ python_min }}
     - pymatgen >=2024.2.20
     - numpy >=1.25.0,<2.0.0
     - tqdm >=4.63.0
@@ -42,6 +42,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/PhasesResearchLab/PyQAlloy
